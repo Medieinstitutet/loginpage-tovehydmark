@@ -1,26 +1,60 @@
-//ELEMENTS NEEDED FOR HEADER
+/***
+ * ELEMENTS NEEDED FOR HEADER
+ ***/
 const header = document.getElementById("header");
 //USER NAME INPUT
 const userName = document.createElement("input");
 userName.setAttribute("id", "userName");
 userName.setAttribute("type", "text")
+userName.setAttribute("placeholder", "Username")
 
 //PASSWORD INPUT
 const userPassword = document.createElement("input")
 userPassword.setAttribute("id", "userPassword");
 userPassword.setAttribute("type", "password")
+userPassword.setAttribute("placeholder", "password")
 
 //LOGOUT BUTTON
 const logoutBtn = document.createElement("button");
 
 
-//ELEMENTS NEEDED FOR MAIN
+/***
+ * LOGIN DETAILS + DETAILS SAVED TO LOCALSTORAGE
+ ***/
+
+let userNameJanne = "janne";
+let userPasswordTest = "test"
+
+localStorage.setItem("userName", "janne");
+localStorage.setItem("password", "test");
+
+let theUsername = localStorage.getItem("userName");
+let thePassword = localStorage.getItem("password");
+
+//console.log(theUsername)
+//console.log(thePassword)
+
+
+
+
+if (userName.value == "janne") {
+    console.log("wohoo")
+}
+
+
+
+/***
+ * ELEMENTS NEEDED FOR MAIN
+ ***/
 const main = document.getElementById("main");
-//PARAGRAPH WHIC I CAN CHANGE CONTENT OF
+
+//PARAGRAPH WHICH I CAN USE TO CHANGE CONTENT OF MAIN VIEW
 let myParagraph = document.getElementsByClassName("pageParagraph")[0];
 
+/***
+ * HEADER CONTENT
+ ***/
 
-//HEADER
 //Utloggad: visa ett inloggningsformulär
 function showLoginForm() {
     header.append(userName);
@@ -36,7 +70,10 @@ function showLogoutBtn() {
 }
 //showLogoutBtn()
 
-//3 STATES FOR MAIN:
+/***
+ * 3 STATES FOR MAIN CONTENT
+ ***/
+
 //State för ej inloggade
 function notLoggedIn() {
     myParagraph.innerHTML = "You are not logged in.";
@@ -47,13 +84,12 @@ notLoggedIn()
 function loggedIn() {
     myParagraph.innerHTML = "Welcome Janne, you are logged in! This is good news for me because that means the login function is working.";
 }
-//loggedIn()
 
 //State för fel lösenord
 function wrongDetails() {
     myParagraph.innerHTML = "You seem to have entered the wrong login details, please try again.";
 }
-//wrongDetails()
+
 
 
 
