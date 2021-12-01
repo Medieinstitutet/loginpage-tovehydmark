@@ -18,9 +18,16 @@ function showLoginForm() {
     userPassword.setAttribute("id", "userPassword");
     userPassword.setAttribute("type", "password")
 }
-showLoginForm();
+//showLoginForm();
 
 //Inloggad: visa logga-ut knapp
+function showLogoutBtn() {
+    const logoutBtn = document.createElement("button");
+    header.append(logoutBtn);
+    logoutBtn.innerText = "log out";
+}
+//showLogoutBtn()
+
 
 
 //3 STATES FOR MAIN:
