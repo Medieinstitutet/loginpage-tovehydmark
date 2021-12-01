@@ -1,1 +1,0 @@
-//Vad ska vi ha i footern?
