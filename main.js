@@ -16,6 +16,7 @@ userPassword.setAttribute("placeholder", "password");
 
 //LOGIN BUTTON
 const loginBtn = document.createElement("button");
+loginBtn.setAttribute("id", "loginBtn");
 
 //LOGOUT BUTTON
 const logoutBtn = document.createElement("button");

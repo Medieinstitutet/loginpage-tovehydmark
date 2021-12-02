@@ -12,11 +12,35 @@ let losenord = document.getElementById("userPassword")
 loginBtn.addEventListener("click", function() {
 
     if ((anvandarnamn.value == rightLoginUser) && (losenord.value == rightLoginPassword)) {
+
         loggedIn();
-        // + change login form to logout button
+        showLogoutBtn();
+        removeUserInput();
 
     } else if ((anvandarnamn.value != userNameJanne) || (losenord.value != rightLoginPassword)) {
+
         wrongDetails()
+
+    } else {
+
+        notLoggedIn()
     }
 
 });
+
+logoutBtn.addEventListener("click", function() {
+    notLoggedIn();
+});
+
+
+
+function removeUserInput() {
+    const removeUserNameInput = document.getElementById("userName");
+    removeUserNameInput.remove();
+
+    const removeUserPassword = document.getElementById("userPassword");
+    removeUserPassword.remove();
+
+    const removeLoginBtn = document.getElementById("loginBtn");
+    removeLoginBtn.remove();
+}
