@@ -29,15 +29,21 @@ loginBtn.addEventListener("click", function() {
 });
 
 logoutBtn.addEventListener("click", function() {
+    //Show "not logged in"-view
     notLoggedIn();
     showLoginForm();
+
+    //Hide logout button
     const removeLogoutBtn = document.getElementById("logoutBtn");
     removeLogoutBtn.remove();
 
+    //Clear login form
+    document.getElementById("userName").value = "";
+    document.getElementById("userPassword").value = "";
+
 });
 
-
-
+/**Function hides the login form */
 function removeUserInput() {
     const removeUserNameInput = document.getElementById("userName");
     removeUserNameInput.remove();

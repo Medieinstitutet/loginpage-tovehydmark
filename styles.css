@@ -1,10 +1,10 @@
-main {
+#main {
     position: relative;
     text-align: center;
     background-color: aquamarine;
 }
 
-header {
+#header {
     background-color: antiquewhite;
 }
 
@@ -15,4 +15,8 @@ header {
 
 .pageParagraph {
     background-color: lightcoral;
+}
+
+#my-footer {
+    background-color: lightgray;
 }

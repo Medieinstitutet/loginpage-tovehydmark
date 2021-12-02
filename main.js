@@ -52,7 +52,7 @@ let myParagraph = document.getElementsByClassName("pageParagraph")[0];
  * HEADER CONTENT
  ***/
 
-//Utloggad: visa ett inloggningsformulär
+/**Function shows the login form */
 function showLoginForm() {
     header.append(userName);
     header.append(userPassword);
@@ -62,7 +62,7 @@ function showLoginForm() {
 showLoginForm();
 
 
-//Inloggad: visa logga-ut knapp
+/**Function shows the log-out button */
 function showLogoutBtn() {
     header.append(logoutBtn);
     logoutBtn.innerText = "log out";
@@ -73,18 +73,18 @@ function showLogoutBtn() {
  * 3 STATES FOR MAIN CONTENT
  ***/
 
-//State för ej inloggade
+/**Function shows the NOT logged-in main view */
 function notLoggedIn() {
     myParagraph.innerHTML = "You are not logged in.";
 }
 
 
-//State för inloggad
+/**Function shows the logged-in main view */
 function loggedIn() {
     myParagraph.innerHTML = "Welcome Janne, you are logged in! This is good news for me because that means the login function is working.";
 }
 
-//State för fel lösenord
+/**Function shows the wrong-password main view */
 function wrongDetails() {
     myParagraph.innerHTML = "You seem to have entered the wrong login details, please try again.";
 }
