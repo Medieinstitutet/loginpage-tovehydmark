@@ -30,6 +30,10 @@ loginBtn.addEventListener("click", function() {
 
 logoutBtn.addEventListener("click", function() {
     notLoggedIn();
+    showLoginForm();
+    const removeLogoutBtn = document.getElementById("logoutBtn");
+    removeLogoutBtn.remove();
+
 });
 
 

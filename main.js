@@ -20,6 +20,7 @@ loginBtn.setAttribute("id", "loginBtn");
 
 //LOGOUT BUTTON
 const logoutBtn = document.createElement("button");
+logoutBtn.setAttribute("id", "logoutBtn");
 
 
 /***
