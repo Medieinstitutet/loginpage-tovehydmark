@@ -5,14 +5,17 @@ const header = document.getElementById("header");
 //USER NAME INPUT
 const userName = document.createElement("input");
 userName.setAttribute("id", "userName");
-userName.setAttribute("type", "text")
-userName.setAttribute("placeholder", "Username")
+userName.setAttribute("type", "text");
+userName.setAttribute("placeholder", "Username");
 
 //PASSWORD INPUT
-const userPassword = document.createElement("input")
+const userPassword = document.createElement("input");
 userPassword.setAttribute("id", "userPassword");
-userPassword.setAttribute("type", "password")
-userPassword.setAttribute("placeholder", "password")
+userPassword.setAttribute("type", "password");
+userPassword.setAttribute("placeholder", "password");
+
+//LOGIN BUTTON
+const loginBtn = document.createElement("button");
 
 //LOGOUT BUTTON
 const logoutBtn = document.createElement("button");
@@ -35,14 +38,6 @@ let thePassword = localStorage.getItem("password");
 //console.log(thePassword)
 
 
-
-
-if (userName.value == "janne") {
-    console.log("wohoo")
-}
-
-
-
 /***
  * ELEMENTS NEEDED FOR MAIN
  ***/
@@ -59,6 +54,8 @@ let myParagraph = document.getElementsByClassName("pageParagraph")[0];
 function showLoginForm() {
     header.append(userName);
     header.append(userPassword);
+    header.append(loginBtn);
+    loginBtn.innerText = "log in"
 }
 showLoginForm();
 
@@ -68,7 +65,7 @@ function showLogoutBtn() {
     header.append(logoutBtn);
     logoutBtn.innerText = "log out";
 }
-//showLogoutBtn()
+
 
 /***
  * 3 STATES FOR MAIN CONTENT
@@ -78,7 +75,7 @@ function showLogoutBtn() {
 function notLoggedIn() {
     myParagraph.innerHTML = "You are not logged in.";
 }
-notLoggedIn()
+
 
 //State för inloggad
 function loggedIn() {
