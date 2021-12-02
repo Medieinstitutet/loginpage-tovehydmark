@@ -30,15 +30,11 @@ logoutBtn.setAttribute("id", "logoutBtn");
 let userNameJanne = "janne";
 let userPasswordTest = "test"
 
-localStorage.setItem("userName", "janne");
+/* localStorage.setItem("userName", "janne");
 localStorage.setItem("password", "test");
 
 let theUsername = localStorage.getItem("userName");
-let thePassword = localStorage.getItem("password");
-
-//console.log(theUsername)
-//console.log(thePassword)
-
+let thePassword = localStorage.getItem("password"); /*
 
 /***
  * ELEMENTS NEEDED FOR MAIN

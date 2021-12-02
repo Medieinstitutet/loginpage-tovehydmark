@@ -1,14 +1,45 @@
 showLoginForm();
 notLoggedIn()
 
-//GET DATA FROM LS TO LOGIN
+
+//Sparar inloggningsuppgifterna till localStorage vid klick på logga-in-knapp
+loginBtn.addEventListener("click", function() {
+    localStorage.setItem("userName", userName.value);
+    localStorage.setItem("password", userPassword.value);
+})
+
+//Tar bort inloggningsuppgifterna från localStorage
+logoutBtn.addEventListener("click", function() {
+    localStorage.clear();
+});
+
+
+/* function stayOnSite() {
+    //Hämta inloggningsdetaljerna från LS
+    let theUsername = localStorage.getItem("userName");
+    let thePassword = localStorage.getItem("password");
+    if (theUsername == "janne" && thePassword == "test") {
+        loggedIn();
+        showLogoutBtn();
+    }
+} */
+
+//SE TILL ATT KÖRA DENHÄR FUNKTIONEN I LOGGA-IN-FUNKTIONEN, SAMT NÄR SIDAN LADDAS OM!! FLER STÄLLEN??
+
+
+//vid klick på logga-ut-knapp: 
+//hämta värden från LS
+//Clear värden från LS
+//
+
+
+let anvandarnamn = document.getElementById("userName").value
+let losenord = document.getElementById("userPassword").value
+
 let rightLoginUser = localStorage.getItem("userName");
 let rightLoginPassword = localStorage.getItem("password");
 
-let anvandarnamn = document.getElementById("userName")
-let losenord = document.getElementById("userPassword")
 
-//CREATE CLICK EVENT FOR LOGIN BUTTON
 loginBtn.addEventListener("click", function() {
 
     if ((anvandarnamn.value == rightLoginUser) && (losenord.value == rightLoginPassword)) {
