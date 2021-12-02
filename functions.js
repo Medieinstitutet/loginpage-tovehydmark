@@ -14,15 +14,19 @@ logoutBtn.addEventListener("click", function() {
 });
 
 
-/* function stayOnSite() {
+function stayOnSite() {
     //Hämta inloggningsdetaljerna från LS
     let theUsername = localStorage.getItem("userName");
     let thePassword = localStorage.getItem("password");
     if (theUsername == "janne" && thePassword == "test") {
         loggedIn();
         showLogoutBtn();
+        removeUserInput();
+
+    } else {
+        console.log("JSGAIGPAHIB")
     }
-} */
+}
 
 //SE TILL ATT KÖRA DENHÄR FUNKTIONEN I LOGGA-IN-FUNKTIONEN, SAMT NÄR SIDAN LADDAS OM!! FLER STÄLLEN??
 
@@ -85,3 +89,5 @@ function removeUserInput() {
     const removeLoginBtn = document.getElementById("loginBtn");
     removeLoginBtn.remove();
 }
+
+stayOnSite();
