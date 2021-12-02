@@ -26,15 +26,8 @@ logoutBtn.setAttribute("id", "logoutBtn");
 /***
  * LOGIN DETAILS + DETAILS SAVED TO LOCALSTORAGE
  ***/
-
 let userNameJanne = "janne";
 let userPasswordTest = "test"
-
-/* localStorage.setItem("userName", "janne");
-localStorage.setItem("password", "test");
-
-let theUsername = localStorage.getItem("userName");
-let thePassword = localStorage.getItem("password"); /*
 
 /***
  * ELEMENTS NEEDED FOR MAIN
@@ -84,23 +77,3 @@ function loggedIn() {
 function wrongDetails() {
     myParagraph.innerHTML = "You seem to have entered the wrong login details, please try again.";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//FOOTER
-//Samma på alla sidor. Skrive "Footer"
