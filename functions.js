@@ -40,6 +40,11 @@ loginBtn.addEventListener("click", function() {
         showLogoutBtn();
         removeUserInput();
 
+    } else if ((anvandarnamn.value == secondUserName) && (losenord.value == secondUserPassword)) {
+        loggedIn();
+        showLogoutBtn();
+        removeUserInput();
+
     } else if ((anvandarnamn.value != userNameJanne) || (losenord.value != userPasswordTest)) {
 
         wrongDetails()

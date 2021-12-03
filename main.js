@@ -29,6 +29,9 @@ logoutBtn.setAttribute("id", "logoutBtn");
 let userNameJanne = "janne";
 let userPasswordTest = "test"
 
+let secondUserName = "tove";
+let secondUserPassword = "skoj";
+
 /***
  * ELEMENTS NEEDED FOR MAIN
  ***/
@@ -70,7 +73,7 @@ function notLoggedIn() {
 
 /**Function shows the logged-in main view */
 function loggedIn() {
-    myParagraph.innerHTML = "Welcome Janne, you are logged in! This is good news for me because that means the login function is working.";
+    myParagraph.innerHTML = "Welcome " + anvandarnamn.value + ", you are logged in!";
 }
 
 /**Function shows the wrong-password main view */
