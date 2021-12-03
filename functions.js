@@ -13,7 +13,7 @@ logoutBtn.addEventListener("click", function() {
     localStorage.clear();
 });
 
-/**This function keeps the logged in user in the right view when logged in, even when page is updated */
+/**This function keeps the logged in user in the right view, even when page is updated */
 function stayOnSite() {
     //Fetches the login details from localStorage
     let theUsername = localStorage.getItem("userName");
@@ -22,9 +22,6 @@ function stayOnSite() {
         loggedIn();
         showLogoutBtn();
         removeUserInput();
-
-    } else {
-        console.log("JSGAIGPAHIB")
     }
 }
 
