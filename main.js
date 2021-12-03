@@ -78,5 +78,5 @@ function loggedIn() {
 
 /**Function shows the wrong-password main view */
 function wrongDetails() {
-    myParagraph.innerHTML = "You seem to have entered the wrong login details, please try again.";
+    myParagraph.innerHTML = "You have entered the wrong login details, please try again.";
 }
