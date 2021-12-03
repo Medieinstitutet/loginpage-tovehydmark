@@ -29,6 +29,8 @@ function stayOnSite() {
     }
 }
 
+
+//This part determines which main view to show dependent on user input, fetching data from localStorage
 let anvandarnamn = document.getElementById("userName")
 let losenord = document.getElementById("userPassword")
 
@@ -60,12 +62,11 @@ loginBtn.addEventListener("click", function() {
     }
 });
 
+//This section changes the view from logged-in to logged-out
 logoutBtn.addEventListener("click", function() {
-    //Show "not logged in"-view
     notLoggedIn();
     showLoginForm();
 
-    //Hide logout button
     const removeLogoutBtn = document.getElementById("logoutBtn");
     removeLogoutBtn.remove();
 
@@ -86,7 +87,6 @@ function removeUserInput() {
     const removeLoginBtn = document.getElementById("loginBtn");
     removeLoginBtn.remove();
 }
-
 
 
 stayOnSite();

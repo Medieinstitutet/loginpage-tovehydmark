@@ -79,5 +79,3 @@ function loggedIn() {
 function wrongDetails() {
     myParagraph.innerHTML = "You have entered the wrong login details, please try again.";
 }
-
-stayOnSite();
