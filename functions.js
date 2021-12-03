@@ -22,6 +22,10 @@ function stayOnSite() {
         loggedIn();
         showLogoutBtn();
         removeUserInput();
+    } else if ((theUsername == "tove") && (thePassword == "skoj")) {
+        loggedIn();
+        showLogoutBtn();
+        removeUserInput();
     }
 }
 
@@ -82,5 +86,7 @@ function removeUserInput() {
     const removeLoginBtn = document.getElementById("loginBtn");
     removeLoginBtn.remove();
 }
+
+
 
 stayOnSite();

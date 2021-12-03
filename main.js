@@ -70,13 +70,14 @@ function notLoggedIn() {
     myParagraph.innerHTML = "You are not logged in.";
 }
 
-
 /**Function shows the logged-in main view */
 function loggedIn() {
-    myParagraph.innerHTML = "Welcome " + anvandarnamn.value + ", you are logged in!";
+    myParagraph.innerHTML = "Welcome " + localStorage.getItem("userName") + ", you are logged in!";
 }
 
 /**Function shows the wrong-password main view */
 function wrongDetails() {
     myParagraph.innerHTML = "You have entered the wrong login details, please try again.";
 }
+
+stayOnSite();
