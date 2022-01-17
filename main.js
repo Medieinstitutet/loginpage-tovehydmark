@@ -1,48 +1,35 @@
-/***
- * ELEMENTS NEEDED FOR HEADER
- ***/
 const header = document.getElementById("header");
-//USER NAME INPUT
+
 const userName = document.createElement("input");
 userName.setAttribute("id", "userName");
 userName.setAttribute("type", "text");
 userName.setAttribute("placeholder", "Username");
 
-//PASSWORD INPUT
 const userPassword = document.createElement("input");
 userPassword.setAttribute("id", "userPassword");
 userPassword.setAttribute("type", "password");
 userPassword.setAttribute("placeholder", "password");
 
-//LOGIN BUTTON
 const loginBtn = document.createElement("button");
 loginBtn.setAttribute("id", "loginBtn");
 
-//LOGOUT BUTTON
 const logoutBtn = document.createElement("button");
 logoutBtn.setAttribute("id", "logoutBtn");
 
 
-/***
- * LOGIN DETAILS + DETAILS SAVED TO LOCALSTORAGE
- ***/
 let userNameJanne = "janne";
 let userPasswordTest = "test"
 
 let secondUserName = "tove";
 let secondUserPassword = "skoj";
 
-/***
- * ELEMENTS NEEDED FOR MAIN
- ***/
+
 const main = document.getElementById("main");
 
-//PARAGRAPH WHICH I CAN USE TO CHANGE CONTENT OF MAIN VIEW
+//PARAGRAPH FOR MAIN VIEV CONTENT
 let myParagraph = document.getElementsByClassName("pageParagraph")[0];
 
-/***
- * HEADER CONTENT
- ***/
+
 
 /**Function shows the login form */
 function showLoginForm() {
@@ -61,9 +48,6 @@ function showLogoutBtn() {
 }
 
 
-/***
- * 3 STATES FOR MAIN CONTENT
- ***/
 
 /**Function shows the NOT logged-in main view */
 function notLoggedIn() {

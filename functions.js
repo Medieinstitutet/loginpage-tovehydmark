@@ -3,19 +3,19 @@ showLoginForm();
 notLoggedIn()
 
 //Saves login details to localStorage when you klick login-button
-loginBtn.addEventListener("click", function() {
+loginBtn.addEventListener("click", function () {
     localStorage.setItem("userName", userName.value);
     localStorage.setItem("password", userPassword.value);
 })
 
 //Removes login details from localStorage
-logoutBtn.addEventListener("click", function() {
+logoutBtn.addEventListener("click", function () {
     localStorage.clear();
 });
 
-/**This function keeps the logged in user in the right view, even when page is updated */
+/**Keeps the logged in user in the right view when page is updated */
 function stayOnSite() {
-    //Fetches the login details from localStorage
+
     let theUsername = localStorage.getItem("userName");
     let thePassword = localStorage.getItem("password");
     if ((theUsername == "janne") && (thePassword == "test")) {
@@ -30,7 +30,7 @@ function stayOnSite() {
 }
 
 
-//This part determines which main view to show dependent on user input, fetching data from localStorage
+//Shows main view dependent on user input
 let anvandarnamn = document.getElementById("userName")
 let losenord = document.getElementById("userPassword")
 
@@ -38,7 +38,7 @@ let rightLoginUser = localStorage.getItem("userName");
 let rightLoginPassword = localStorage.getItem("password");
 
 
-loginBtn.addEventListener("click", function() {
+loginBtn.addEventListener("click", function () {
 
     if ((anvandarnamn.value == userNameJanne) && (losenord.value == userPasswordTest)) {
 
@@ -62,15 +62,15 @@ loginBtn.addEventListener("click", function() {
     }
 });
 
-//This section changes the view from logged-in to logged-out
-logoutBtn.addEventListener("click", function() {
+//Changes the view from logged-in to logged-out
+logoutBtn.addEventListener("click", function () {
     notLoggedIn();
     showLoginForm();
 
     const removeLogoutBtn = document.getElementById("logoutBtn");
     removeLogoutBtn.remove();
 
-    //Clear login form
+
     document.getElementById("userName").value = "";
     document.getElementById("userPassword").value = "";
 
